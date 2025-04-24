@@ -29,11 +29,23 @@ function App() {
   return (
     <main>
       <h1>Tour Gallery</h1>
-      <Gallery tours={tours} onRemove={(id) =>
-        setTours((prev) => prev.filter((tour) => tour.id !== id))
-      } />
+  
+      {/* If loading is true, display "Loading..." */}
+      {loading && <p>Loading...</p>}
+  
+      {/* If error, display an error message */}
+      {error && <p style={{ color: 'red' }}>Failed to load tours. Please try again later.</p>}
+  
+      {/* Else, render Gallery with tour data */}
+      {!loading && !error && (
+        <Gallery
+          tours={tours}
+          onRemove={(id) => setTours((prev) => prev.filter((tour) => tour.id !== id))}
+        />
+      )}
     </main>
   );
+  
 }  
 
 export default App;
