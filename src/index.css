@@ -1,0 +1,97 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Main App Styling */
+main {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #ff69b4;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Tour Card */
+.tour-card {
+  background-color: #fffafc;
+  border: 2px solid #ffcce0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  cursor: pointer;
+}
+
+.tour-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 2px solid #ffe6f0;
+}
+
+/* Text Styling */
+.tour-card h2 {
+  font-size: 1.4rem;
+  color: #b03060;
+  margin-bottom: 0.4rem;
+}
+
+.tour-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.tour-card strong {
+  color: #c2185b;
+}
+
+/* Button */
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
