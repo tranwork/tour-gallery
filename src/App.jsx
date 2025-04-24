@@ -29,9 +29,11 @@ function App() {
   return (
     <main>
       <h1>Tour Gallery</h1>
-      {/* we'll add conditional rendering and Gallery here in the next task */}
+      <Gallery tours={tours} onRemove={(id) =>
+        setTours((prev) => prev.filter((tour) => tour.id !== id))
+      } />
     </main>
   );
-}
+}  
 
 export default App;
