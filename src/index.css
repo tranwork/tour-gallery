@@ -6,10 +6,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  color: #333;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f3e5ab, #fff8dc);
+  color: #9c6f5a;
   padding: 2rem;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -17,20 +18,23 @@ body {
 main {
   max-width: 1200px;
   margin: auto;
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background-color: #fffaf0;
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(60, 40, 20, 0.2);
   padding: 2rem;
 }
 
 /* Title */
+.boba-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
 h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 2rem;
-  border-bottom: 3px solid #ff69b4;
-  display: inline-block;
-  padding-bottom: 0.5rem;
+  font-size: 2.8rem;
+  color: #5c4033;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* Gallery Layout */
@@ -43,55 +47,72 @@ h1 {
 
 /* Tour Card */
 .tour-card {
-  background-color: #fffafc;
-  border: 2px solid #ffcce0;
-  border-radius: 16px;
+  background-color: #fff8f0;
+  border: 2px dashed #5c4033;
+  border-radius: 18px;
   padding: 1.5rem;
-  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.15);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(60, 40, 20, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .tour-card:hover {
-  transform: translateY(-6px);
-  cursor: pointer;
+  transform: translateY(-5px);
+  background-color: #fff6d1;
 }
 
 .tour-card img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-bottom: 1rem;
-  border: 2px solid #ffe6f0;
+  border: 2px solid #f3e5ab;
 }
 
 /* Text Styling */
 .tour-card h2 {
-  font-size: 1.4rem;
-  color: #b03060;
+  font-size: 1.5rem;
+  color: #6a443d;
   margin-bottom: 0.4rem;
 }
 
 .tour-card p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0.5rem 0;
+  font-weight: normal;
 }
 
-.tour-card strong {
-  color: #c2185b;
+/* Price Styling */
+.price {
+  display: inline-block;
+  color: #2e7d32;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 0%;
 }
 
 /* Button */
 button {
-  background-color: #ff69b4;
-  color: white;
+  background-color: #ffc0cb;
+  color: #5c4033;
   border: none;
   padding: 0.6rem 1.4rem;
   margin-top: 1rem;
-  border-radius: 10px;
+  border-radius: 50px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(60, 40, 20, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #ff1493;
+  background-color: #ffb6c1;
+  transform: scale(1.05);
+}
+
+/* Error Message */
+.error {
+  color: #e63946;
+  font-weight: bold;
 }

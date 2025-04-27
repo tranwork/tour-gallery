@@ -8,7 +8,7 @@ function TourCard({ id, name, info, image, price, onRemove }) {
     <div className="tour-card">
       <img src={image} alt={name} />
       <h2>{name}</h2>
-      <p><strong>${price}</strong></p>
+      <p><span className="price">${price}</span></p> 
       <p>{info}</p>
       <button onClick={() => onRemove(id)}>Not Interested</button>
     </div>
