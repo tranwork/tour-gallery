@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import Gallery from './components/Gallery';
 
 // Fetch tours from https://course-api.com/react-tours-project using useEffect
@@ -12,7 +12,7 @@ function App() {
   const fetchTours = async () => {
     setLoading(true);
     try {
-      const res = await fetch('https://course-api.com/react-tours-project');
+      const res = await fetch('/api/react-tours-project');
       const data = await res.json();
       setTours(data);
       setError(false);
@@ -29,30 +29,23 @@ function App() {
   return (
     <main>
       <h1>Tour Gallery</h1>
-
+  
       {/* If loading is true, display "Loading..." */}
       {loading && <p>Loading...</p>}
-
+  
       {/* If error, display an error message */}
       {error && <p style={{ color: 'red' }}>Failed to load tours. Please try again later.</p>}
-
-      {/* If tours exist, show the gallery */}
-      {!loading && !error && tours.length > 0 && (
+  
+      {/* Else, render Gallery with tour data */}
+      {!loading && !error && (
         <Gallery
           tours={tours}
           onRemove={(id) => setTours((prev) => prev.filter((tour) => tour.id !== id))}
         />
       )}
-
-      {/* If no tours left, show refresh */}
-      {!loading && !error && tours.length === 0 && (
-        <div>
-          <p>No tours left.</p>
-          <button onClick={fetchTours}>Refresh Tours</button>
-        </div>
-      )}
     </main>
   );
-}
+  
+}  
 
 export default App;
